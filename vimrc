@@ -2,6 +2,12 @@
 " .vimrc config file
 "
 
+" Load pathogen yum!
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 " set my default color scheme
 colorscheme torte
 
@@ -80,10 +86,12 @@ inoremap [ []<Esc>i
 inoremap {{ {}<Esc>i
 inoremap { {<CR>}<Esc>0
 autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
+inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
 inoremap } <c-r>=CloseBracket()<CR>
+inoremap "" "<Esc>a
 inoremap " <c-r>=QuoteDelim('"')<CR>
-inoremap '' '<Esc>i
+inoremap '' '<Esc>a
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 
 " function to close the pair
