@@ -1,4 +1,7 @@
 dotvim
 ======
 
-.vim file backups
+.vim folder backups
+
+Includes .vimrc and plugins as submodules
+
