@@ -79,6 +79,8 @@ else
   autocmd BufEnter * silent! lcd %:p:h:gs/ /\\/
 endif
 
+" syntastic options
+let g:syntastic_auto_loc_list = 1
 
 " --------------[ Bracket completion stuff ]-----------
 inoremap ( ()<Esc>i
