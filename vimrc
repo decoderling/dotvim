@@ -82,6 +82,10 @@ endif
 " syntastic options
 let g:syntastic_auto_loc_list = 1
 
+" remap ctrl-p bindings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " --------------[ Bracket completion stuff ]-----------
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
