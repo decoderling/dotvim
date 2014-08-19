@@ -86,10 +86,13 @@ let g:syntastic_auto_loc_list = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" vim-mustache-handlebars options
+let g:mustache_abbreviations = 1
+
+
 " --------------[ Bracket completion stuff ]-----------
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap {{ {}<Esc>i
 inoremap { {<CR>}<Esc>0
 autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ) <c-r>=ClosePair(')')<CR>
