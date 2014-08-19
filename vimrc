@@ -4,9 +4,8 @@
 
 " Load pathogen yum!
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+execute pathogen#infect('bundle/{}')
 call pathogen#helptags()
-call pathogen#incubate()
 
 " set my default color scheme
 colorscheme torte
