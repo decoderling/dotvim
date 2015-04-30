@@ -137,3 +137,6 @@ function QuoteDelim(char)
 endf
 " --------------[ END Bracket completion stuff ]-----------
 
+let g:ruby_debugger_progname = 'mvim'
+let g:ruby_debugger_debug_mode = 1
+

@@ -45,3 +45,9 @@
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/vim-ruby-debugger"]
+	path = bundle/vim-ruby-debugger
+	url = https://github.com/astashov/vim-ruby-debugger.git
+[submodule "bundle/vim-puppet"]
+	path = bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
