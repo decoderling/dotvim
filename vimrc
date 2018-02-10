@@ -69,26 +69,24 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Mapping to toggle NERDTree with a convenient leader
 nmap <leader>nt :NERDTree<CR>
+
+" Mapping ale shortcuts
+nmap <leader>ap :ALEPrevious<CR>
+nmap <leader>an :ALENext<CR>
+nmap <leader>at :ALEToggle<CR>
+nmap <leader>ad :ALEDetail<CR>
+nmap <leader>af :ALEFix<CR>
 " ------[ END key remapping ]------
 
-" ------[ BEGIN syntastic options ]------
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-"let g:syntastic_javascript_checkers = ['eslint']
-
-let g:syntastic_error_symbol = '⛔'
-let g:syntastic_style_error_symbol = '🚫'
-let g:syntastic_warning_symbol = '❗'
-let g:syntastic_style_warning_symbol = '💩'
-
-"highlight link SyntasticErrorSign SignColumn
-"highlight link SyntasticWarningSign SignColumn
-"highlight link SyntasticStyleErrorSign SignColumn
-"highlight link SyntasticStyleWarningSign SignColumn
-" ------[ END syntastic options ]------
+" ------[ BEGIN ale options ]------
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fix_on_save = 1
+let g:ale_open_list = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+let g:airline#extensions#ale#enabled = 1
+let g:ale_javascript_prettier_use_local_config = 1
+" ------[ END ale options ]------
 
 " remap ctrl-p bindings
 let g:ctrlp_map = '<c-p>'
