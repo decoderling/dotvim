@@ -52,13 +52,6 @@ filetype plugin indent on
 " enable status line
 set laststatus=2
 
-" Quickly edit/reload the .vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-" Mapping to toggle NERDTree with a convenient leader
-nmap <leader>nt :NERDTree<CR>
-
 " Keep the buffers alive after the file is closed
 set hidden
 
@@ -68,6 +61,15 @@ if exists('+autochdir')
 else
   autocmd BufEnter * silent! lcd %:p:h:gs/ /\\/
 endif
+
+" ------[ BEGIN key remapping ]------
+" Quickly edit/reload the .vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Mapping to toggle NERDTree with a convenient leader
+nmap <leader>nt :NERDTree<CR>
+" ------[ END key remapping ]------
 
 " ------[ BEGIN syntastic options ]------
 let g:syntastic_always_populate_loc_list = 1
@@ -95,12 +97,3 @@ let g:ctrlp_cmd = 'CtrlP'
 " vim-mustache-handlebars options
 let g:mustache_abbreviations = 1
 
-let g:ruby_debugger_progname = 'mvim'
-let g:ruby_debugger_debug_mode = 1
-
-" Set VDebug for Mashery PHP debugging
-if !exists('g:vdebug_options')
-    let g:vdebug_options = {}
-endif
-
-let g:vdebug_options['path_maps'] = { '/var/www/mashery.com': '/Users/davidlin/code/mashery-base' }
