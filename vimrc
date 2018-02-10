@@ -83,7 +83,8 @@ let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fix_on_save = 1
 let g:ale_open_list = 1
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+"let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_javascript_prettier_use_local_config = 1
 " ------[ END ale options ]------
