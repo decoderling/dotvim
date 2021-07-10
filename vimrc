@@ -14,6 +14,7 @@ colorscheme torte
 syntax on
 
 " set formatting properties
+set encoding=UTF-8
 set expandtab
 set shiftwidth=2
 set softtabstop=2

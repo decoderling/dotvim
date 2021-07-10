@@ -57,3 +57,6 @@
 [submodule "bundle/vim-jsx-typescript"]
 	path = bundle/vim-jsx-typescript
 	url = git@github.com:peitalin/vim-jsx-typescript.git
+[submodule "bundle/vim-devicons"]
+	path = bundle/vim-devicons
+	url = git@github.com:ryanoasis/vim-devicons.git
