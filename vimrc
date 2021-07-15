@@ -15,6 +15,7 @@ syntax on
 
 " set formatting properties
 set encoding=UTF-8
+set guifont=MesloLGSDZ\ Nerd\ Font:h11
 set expandtab
 set shiftwidth=2
 set softtabstop=2
@@ -88,9 +89,13 @@ let g:ale_open_list = 1
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_linter_aliases = {'typescriptreact': 'typescript'}
 "let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
-let g:airline#extensions#ale#enabled = 1
 let g:ale_javascript_prettier_use_local_config = 1
 " ------[ END ale options ]------
+
+" ------[ BEGIN airline options ]------
+let g:airline#extensions#ale#enabled = 1
+let g:airline_powerline_fonts = 1
+" ------[ END airline options ]------
 
 " remap ctrl-p bindings
 let g:ctrlp_map = '<c-p>'
