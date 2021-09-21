@@ -69,6 +69,9 @@ endif
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Map ASCII Border making
+vmap <leader>1 :.!toilet -w 200 -f term -F border<CR>
+
 " Mapping to toggle NERDTree with a convenient leader
 nmap <leader>nt :NERDTree<CR>
 
@@ -108,3 +111,11 @@ let g:mustache_abbreviations = 1
 let g:vedebug_options = {}
 let g:vedebug_options['debug_window_level'] = 2
 let g:vedebug_options['debug_file_level'] = 2
+
+" Toilet mapping to create ASCII Art
+vmap <leader>f? :.!toilet -w 200 -d /usr/local/Cellar/figlet/2.2.5/share/figlet/fonts 
+vmap <leader>F :.!toilet -w 200 -d /usr/local/Cellar/figlet/2.2.5/share/figlet/fonts -f standard<CR>
+vmap <leader>f :.!toilet -w 200 -d /usr/local/Cellar/figlet/2.2.5/share/figlet/fonts -f small<CR>
+vmap <leader>Fb :.!toilet -w 200 -d /usr/local/Cellar/figlet/2.2.5/share/figlet/fonts -F border<CR>
+vmap <leader>fb :.!toilet -w 200 -d /usr/local/Cellar/figlet/2.2.5/share/figlet/fonts -f small -F border<CR>
+vmap <leader>b :.!toilet -w 200 -d /usr/local/Cellar/figlet/2.2.5/share/figlet/fonts -F border<CR>

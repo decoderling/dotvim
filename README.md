@@ -5,6 +5,19 @@ dotvim
 
 Includes .vimrc and plugins as submodules
 
+## Extra Requirements 
+
+* Figlet
+```
+brew install figlet
+```
+
+* Toilet
+```
+brew install toilet
+```
+
+
 Installation
 ------------
 To setup the vim environment on another machine:
