@@ -17,7 +17,6 @@ syntax on
 
 " GUI options
 set guifont=MesloLGSDZ\ Nerd\ Font:h11
-set transparency=15
 
 " setup text formatting
 set encoding=UTF-8
@@ -82,6 +81,13 @@ vmap <leader>b :.!toilet -w 200 -d /usr/local/Cellar/figlet/2.2.5/share/figlet/f
 " ---[ END Standard VIM Configuration ]---
 
 " Setup vim-plug
+" ---[ Setup auto-install of vim-plug ]---
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Install plugins into '~/.vim/plugged'
 call plug#begin('~/.vim/plugged')
 
