@@ -1,11 +1,36 @@
 dotvim
 ======
 
-.vim folder backups
+`.vim` folder setup for how I like to use it
 
-Includes .vimrc and plugins as submodules
+Includes a `vimrc` file that is meant to be used as the main configuration file.
 
-## Extra Requirements 
+## Basic Usage
+
+1. Clone this repo into `~/.vim`
+  ```
+    cd ~
+    mkdir -p ~/.vim
+    cd ~/.vim
+    git clone <this repo>
+  ```
+2. `ln -s ~/.vim/vimrc ~/.vimrc`
+3. Open Vim
+
+### Extra Requirements 
+
+**NOTE**: This is to use ASCII and Border commands to have text visuals.
+
+#### Text Visual Keymaps
+
+```
+<leader>f? - Converts text to ASCII specified
+<leader>F - Converts text to standard ASCII
+<leader>f - Converts text to small ASCII
+<leader>Fb - Converts text to standard ASCII with border
+<leader>fb - Converts text to small ASCII with border
+<leader>b - Adds a border around a selection
+```
 
 * Figlet
 ```
@@ -20,33 +45,27 @@ brew install toilet
 
 Installation
 ------------
-To setup the vim environment on another machine:
-
-    cd ~
-    mkdir -p ~/.vim (make the dir if it doesn't exist)
-    git clone http://github.com/decoderling/dotvim.git ~/.vim
-    ln -s ~/.vim/vimrc ~/.vimrc
-    ln -s ~/.vim/gvimrc ~/.gvimrc
-    cd ~/.vim
-    git submodule update --init
+Installation of Vim plugins is simple. Just open vim (with or without a file) and it will install `vim-plug` and the suggested plugins.
 
 
-Adding plugins as submodules
-----------------------------
-    cd ~/.vim
-    git submodule add <URL to git repo> bundle/<name of plugin>
-    git add .
-    git commit
+Adding plugins 
+--------------
+1. Edit `~/.vim/vimrc`
+2. Look for the following text block
+  ```
+    " =================================
+    " ------[ BEGIN add plugins ]------
+    " =================================
+  ```
+3. Add the plugin of your choice, see [reference](https://github.com/junegunn/vim-plug) for more specifics
 
-
-Updating a single plugin
-------------------------
-    cd ~/.vim/bundle/<name of plugin>
-    git pull origin master
 
 
 Updating all plugins
 --------------------
-    git submodule foreach git pull origin master
+Updating plugins can be done within Vim by running the following:
+```
+  :PlugInstall
+```
 
 

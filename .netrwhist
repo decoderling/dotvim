@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/davidli2/Documents/Mashery/iodocs/vtest/vendor/sinon-chai'
-let g:netrw_dirhist_2='/Users/davidlin/code/calypso/app/vendor/backbone.marionette.handlebars/vendor/handelbars'
-let g:netrw_dirhist_3='/Users/davidlin/code/platform-api/com.mashery.platform.common/src/com/mashery/platform/common'
-let g:netrw_dirhist_4='/Users/davidlin/code/vagrant/.vagrant/machines/ld-portal-memcache'
-let g:netrw_dirhist_5='/Users/davidlin/.m2/repository'
-let g:netrw_dirhist_6='/Users/davidlin/code/mashery-base/src/Public/scripts/Iodocs/v2'
